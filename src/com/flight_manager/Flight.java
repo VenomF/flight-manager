@@ -21,8 +21,11 @@ public class Flight {
 	//city where the flight is going
 	private String destination;
 	
-	public Flight() {
-		
+	public Flight(Airline airline, String origin, String destination, Integer id) {
+		this.airline=airline;
+		this.id=id;
+		this.origin=origin;
+		this.destination=destination;
 	}
 
 	public Integer getId() {
