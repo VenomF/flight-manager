@@ -1,14 +1,14 @@
 package com.flight_manager;
 
 public class Airport {
-	
+
 	private String name;
-	
-	
+
+
 	public Airport() {
-		
+
 	}
-	
+
 	public Airport(String name) {
 		this.name = name;
 	}
@@ -25,7 +25,7 @@ public class Airport {
 	public String toString() {
 		return "Airport [name=" + name + "]";
 	}
-	
-	
+
+
 
 }

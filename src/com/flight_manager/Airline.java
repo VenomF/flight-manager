@@ -1,9 +1,9 @@
 package com.flight_manager;
 
 public class Airline {
-	
+
 	private String name;
-	
+
 	public Airline(String name) {
 		this.name=name;
 	}
@@ -20,7 +20,5 @@ public class Airline {
 	public String toString() {
 		return "Airline [name=" + name + "]";
 	}
-	
-	
 
 }

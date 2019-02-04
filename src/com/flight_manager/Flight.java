@@ -5,22 +5,22 @@ import java.util.ArrayList;
 public class Flight {
 	//unique ID
 	private Integer id;
-	
+
 	//which airline owns this flight
 	private Airline airline;
-	
+
 	//from which airport flight takes of
 	private Airport airport;
-	
+
 	//all seats in this flight
 	private ArrayList<Seat> seats;
-	
+
 	//city where it takes off from
 	private String origin;
-	
+
 	//city where the flight is going
 	private String destination;
-	
+
 	public Flight(Airline airline, String origin, String destination, Integer id) {
 		this.airline=airline;
 		this.id=id;
@@ -67,7 +67,7 @@ public class Flight {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	
+
 	public Airport getAirport() {
 		return airport;
 	}
@@ -81,7 +81,7 @@ public class Flight {
 		return "Flight [id=" + id + ", airline=" + airline + ", seats=" + seats + ", origin=" + origin
 				+ ", destination=" + destination + "]";
 	}
-	
-	
+
+
 
 }
