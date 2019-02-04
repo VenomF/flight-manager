@@ -19,14 +19,8 @@ public class Seat {
 	public String getRow() {
 		return row;
 	}
-	public void setRow(String row) {
-		this.row = row;
-	}
 	public Integer getSeatNumber() {
 		return seatNumber;
-	}
-	public void setSeatNumber(Integer seatNumber) {
-		this.seatNumber = seatNumber;
 	}
 	public boolean isAvailable() {
 		return available;
@@ -34,13 +28,5 @@ public class Seat {
 	public void setAvailable(boolean available) {
 		this.available = available;
 	}
-
-	@Override
-	public String toString() {
-		return "Seat [row=" + row + ", seatNumber=" + seatNumber + ", available=" + available + "]";
-	}
-
-
-
 
 }

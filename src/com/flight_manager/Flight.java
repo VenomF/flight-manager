@@ -21,7 +21,7 @@ public class Flight {
 	//city where the flight is going
 	private String destination;
 
-	public Flight(Airline airline, String origin, String destination, Integer id) {
+	Flight(Airline airline, String origin, String destination, Integer id) {
 		this.airline=airline;
 		this.id=id;
 		this.origin=origin;
@@ -30,18 +30,6 @@ public class Flight {
 
 	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Airline getAirline() {
-		return airline;
-	}
-
-	public void setAirline(Airline airline) {
-		this.airline = airline;
 	}
 
 	public ArrayList<Seat> getSeats() {
@@ -56,32 +44,8 @@ public class Flight {
 		return origin;
 	}
 
-	public void setOrigin(String origin) {
-		this.origin = origin;
-	}
-
 	public String getDestination() {
 		return destination;
 	}
-
-	public void setDestination(String destination) {
-		this.destination = destination;
-	}
-
-	public Airport getAirport() {
-		return airport;
-	}
-
-	public void setAirport(Airport airport) {
-		this.airport = airport;
-	}
-
-	@Override
-	public String toString() {
-		return "Flight [id=" + id + ", airline=" + airline + ", seats=" + seats + ", origin=" + origin
-				+ ", destination=" + destination + "]";
-	}
-
-
 
 }
