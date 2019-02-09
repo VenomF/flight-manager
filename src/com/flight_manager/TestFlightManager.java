@@ -2,7 +2,19 @@ package com.flight_manager;
 
 import java.util.Scanner;
 
+/**
+ * Class holds UI for Flight-Manager application.
+ * This class has no data fields, cannot be instantiated
+ * @author Faruk Becirovic (VenomF)
+ *
+ */
+
 public class TestFlightManager {
+	
+	/**
+	 * Main clas for Flight-Manager application.
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);

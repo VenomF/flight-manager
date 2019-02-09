@@ -3,17 +3,34 @@ package com.flight_manager;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is used as master class for Fight-Manager application.
+ * @author Faruk Becirovic (VenomF)
+ * @version 1.0
+ *
+ */
+
 public class SystemManager {
 
 	private List<Airport> listOfAirports;
 	private List<Flight> listOfFlights;
 	private List<Airline> listOfAirlines;
 	
+	/**
+	 * Default contstructor for this class, instantiates all fields of thi instance.
+	 */
+	
 	public SystemManager() {
 		this.listOfAirlines=new ArrayList<Airline>();
 		this.listOfAirports=new ArrayList<Airport>();
 		this.listOfFlights=new ArrayList<Flight>();
 	}
+	
+	/**
+	 * Method used for creating new Airport object.
+	 * @param name Name of Airport to be created
+	 * @return object of type Airport just instantiated.
+	 */
 
 	public Airport createAirport(String name) {
 		boolean validName=true;
@@ -33,6 +50,12 @@ public class SystemManager {
 		}else
 			return null;
 	}
+	
+	/**
+	 * Method used for creating new Airline object.
+	 * @param name Name of new Airline to be created
+	 * @return Airline just created
+	 */
 
 	public Airline createAirline(String name) {
 		boolean validName=true;
@@ -52,12 +75,28 @@ public class SystemManager {
 		}else
 			return null;
 	}
+	
+	/**
+	 * Method used for creating new Flight object.
+	 * @param airline
+	 * @param origin
+	 * @param destination
+	 * @param id
+	 * @return just created instance of Flight object
+	 */
 
 	public Flight createFlight(Airline airline, String origin, String destination, Integer id) {
 		Flight newFlight=new Flight(airline, origin, destination, id);
 		listOfFlights.add(newFlight);
 		return newFlight;
 	}
+	
+	/**
+	 * Method used for creating new Seats objects for a Flight placed in ArrayList.
+	 * @param flightID Unique number for every Flight
+	 * @param numberOfSeatsPerRow Integer specifying number of seats in every row
+	 * @return true if Seat objects creates, false otherwise
+	 */
 
 	public boolean createSeats(Integer flightID, Integer numberOfSeatsPerRow) {
 		Flight flight = null;
@@ -82,6 +121,13 @@ public class SystemManager {
 			return false;
 		}
 	}
+	
+	/**
+	 * Finds all available flights between two cities.
+	 * @param origin starting location
+	 * @param destination finish location
+	 * @return List of available Flight objects that have same origin and destination fields as method parameters
+	 */
 
 	public List<Flight> findAvailableFlights(String origin, String destination){
 		List<Flight> availableFlights=new ArrayList<Flight>();
@@ -93,6 +139,14 @@ public class SystemManager {
 
 		return availableFlights;
 	}
+	
+	/**
+	 * Books seat on desired FLight
+	 * @param FlightID unique number of Flight
+	 * @param seatNumber number of desire seat in row
+	 * @param row desired row for seating position
+	 * @return true if Seat is booked, false otherwise
+	 */
 
 	public boolean bookSeat(Integer FlightID,int seatNumber,String row) {
 		Flight desiredFlight=null;
@@ -115,6 +169,12 @@ public class SystemManager {
 
 		return false;
 	}
+	
+	/**
+	 * Used to find Airline
+	 * @param name name of Airline that needs to be found
+	 * @return desired Airline if it exists, null if there is no such object created
+	 */
 
 	public Airline findAirline(String name) {
 		for(int i=0; i<listOfAirlines.size(); i++)
